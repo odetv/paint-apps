@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paint Apps</title>
+        <script type="module" src="/src/main.jsx"></script>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="https://upload.wikimedia.org/wikipedia/commons/2/2b/Microsoft_Paint.svg"
+        />
+      </head>
+      <body>
+        <section id="root" class="flex flex-col">
+          <header class="flex flex-row overflow-hidden bg-slate-100 shadow-lg">
+            <div class="file w-1/6 sm:w-full md:w-1/3 lg:w-1/6 xl:w-1/6 ">
+              <div class="flex flex-col justify-center items-center mt-4">
+                <div>
+                  <ul class="options grid grid-cols-3 gap-2 mb-10">
+                    <li>
+                      <div class="save-img">
+                        <svg id='Save_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+  
+  
+                          <g transform="matrix(0.48 0 0 0.48 12 12)" >
+                          <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-25, -25)" d="M 7 4 C 5.3545455 4 4 5.3545455 4 7 L 4 43 C 4 44.645455 5.3545455 46 7 46 L 43 46 C 44.645455 46 46 44.645455 46 43 L 46 13.199219 C 45.99994882191271 12.934020079678682 45.89456729090115 12.679699625116491 45.707031 12.492188 L 37.507812 4.2929688 C 37.3203003421418 4.105432582442258 37.065979891616884 4.000051125044005 36.800781 4 L 7 4 z M 7 6 L 12 6 L 12 18 C 12 19.645455 13.354545 21 15 21 L 34 21 C 35.645455 21 37 19.645455 37 18 L 37 6.6132812 L 44 13.613281 L 44 43 C 44 43.554545 43.554545 44 43 44 L 38 44 L 38 29 C 38 27.354545 36.645455 26 35 26 L 15 26 C 13.354545 26 12 27.354545 12 29 L 12 44 L 7 44 C 6.4454545 44 6 43.554545 6 43 L 6 7 C 6 6.4454545 6.4454545 6 7 6 z M 14 6 L 35 6 L 35 18 C 35 18.554545 34.554545 19 34 19 L 15 19 C 14.445455 19 14 18.554545 14 18 L 14 6 z M 29 8 C 28.44773812379154 8.00005521790535 28.00005521790535 8.447738123791542 28 9 L 28 16 C 28.00005521790535 16.55226187620846 28.44773812379154 16.99994478209465 29 17 L 32 17 C 32.55226187620846 16.99994478209465 32.99994478209465 16.55226187620846 33 16 L 33 9 C 32.99994478209465 8.447738123791542 32.55226187620846 8.000055217905349 32 8 L 29 8 z M 30 10 L 31 10 L 31 15 L 30 15 L 30 10 z M 15 28 L 35 28 C 35.554545 28 36 28.445455 36 29 L 36 44 L 14 44 L 14 29 C 14 28.445455 14.445455 28 15 28 z M 8 40 L 8 42 L 10 42 L 10 40 L 8 40 z M 40 40 L 40 42 L 42 42 L 42 40 L 40 40 z" stroke-linecap="round" />
+                          </g>
+                          </svg>
+                      </div>
+                      <span class="hidden">Simpan</span>
+                    </li>
+                    <li>
+                      <div class="clear-canvas">
+                        <svg id='Undo_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                          <g transform="matrix(0.98 0 0 0.98 12 12)" >
+                          <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-12.23, -11.5)" d="M 2 7 L 2 16 L 11 16 L 7.3789062 12.378906 C 8.7653195 11.211569 10.5449 10.5 12.5 10.5 C 16.034 10.5 19.024984 12.794656 20.083984 15.972656 L 22.451172 15.183594 C 21.062172 11.012594 17.138 8 12.5 8 C 9.8543339 8 7.4570807 8.9979817 5.6152344 10.615234 L 2 7 z" stroke-linecap="round" />
+                          </g>
+                          </svg>
+                      </div>
+                      <span class="hidden">Undo</span>
+                    </li>
+                    <li>
+                      <div class="clear-canvas">
+                        <svg id='Redo_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                          <g transform="matrix(0.98 0 0 0.98 12 12)" >
+                          <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-11.77, -11.5)" d="M 22 7 L 18.384766 10.615234 C 16.542919 8.9979817 14.145666 8 11.5 8 C 6.862 8 2.9378281 11.012594 1.5488281 15.183594 L 3.4394531 15.8125 C 4.5654531 12.4365 7.745 10 11.5 10 C 13.59204 10 15.49858 10.767056 16.978516 12.021484 L 13 16 L 22 16 L 22 7 z" stroke-linecap="round" />
+                          </g>
+                          </svg>
+                      </div>
+                      <span class="hidden">Redo</span>
+                    </li>
+                  </ul>
+                </div>
+                <h1 class="text-sm font-semibold">
+                  File
+                </h1>
+              </div>
+            </div>
+            <span class="border border-r"></span>
+            <div class="clipboard w-1/6 sm:w-full md:w-1/3 lg:w-1/6 xl:w-1/6 ">
+              <div class="flex flex-col justify-center items-center mt-4">
+                <div>
+                  <ul class="options grid grid-cols-3 gap-2 mb-10">
+                    <li>
+                      <svg id='Copy_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+                        <g transform="matrix(0.53 0 0 0.53 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-24, -24)" d="M 18.5 5 C 15.480226 5 13 7.4802259 13 10.5 L 13 32.5 C 13 35.519774 15.480226 38 18.5 38 L 34.5 38 C 37.519774 38 40 35.519774 40 32.5 L 40 10.5 C 40 7.4802259 37.519774 5 34.5 5 L 18.5 5 z M 18.5 8 L 34.5 8 C 35.898226 8 37 9.1017741 37 10.5 L 37 32.5 C 37 33.898226 35.898226 35 34.5 35 L 18.5 35 C 17.101774 35 16 33.898226 16 32.5 L 16 10.5 C 16 9.1017741 17.101774 8 18.5 8 z M 11 10 L 9.78125 10.8125 C 8.66825 11.5545 8 12.803625 8 14.140625 L 8 33.5 C 8 38.747 12.253 43 17.5 43 L 30.859375 43 C 32.197375 43 33.4465 42.33175 34.1875 41.21875 L 35 40 L 17.5 40 C 13.91 40 11 37.09 11 33.5 L 11 10 z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Copy</span>
+                    </li>
+                    <li>
+                      <svg id='Scissors_1_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.83 0 0 0.83 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-12.01, -12)" d="M 18.07 16.39 C 16.61818112291815 16.038769513871166 15.093652759194862 16.55213110573717 14.149999999999999 17.71 L 13.25 15.440000000000001 C 13.209144697151228 15.33186510604535 13.251177451748525 15.209970117713189 13.35 15.150000000000002 C 17.39360765285276 12.626356580418925 19.893644148607883 8.235315035994885 20 3.469999999999997 C 19.998739969881893 2.4284240031494075 19.871141410965418 1.3908462477496335 19.62 0.3800000000000048 C 19.56767334325152 0.1787724665741335 19.396276472090904 0.03092831730131168 19.189548441206867 0.008699496776146454 C 18.98282041032283 -0.013529323749018773 18.783910595578337 0.09449690230820001 18.69 0.28000000000000025 L 12.22 13.53 C 12.181848226438177 13.617507141804298 12.09546233651378 13.674083369533744 12 13.674083369533744 C 11.904537663486222 13.674083369533744 11.818151773561825 13.617507141804298 11.780000000000001 13.53 L 5.31 0.28 C 5.216089404421663 0.09449690230819988 5.017179589677171 -0.013529323749018829 4.810451558793134 0.008699496776146454 C 4.6037235279090964 0.030928317301311736 4.43232665674848 0.17877246657413354 4.38 0.38 C 4.128858589034583 1.3908462477496322 4.001260030118108 2.4284240031494138 4.000000000000003 3.47000000000001 C 4.106355851392115 8.235315035994883 6.606392347147237 12.62635658041892 10.649999999999995 15.149999999999997 C 10.748822548251475 15.209970117713187 10.790855302848772 15.331865106045349 10.75 15.44 L 9.85 17.71 C 8.90956268970982 16.55382544191361 7.388775898088053 16.04041404423056 5.939999999999996 16.39 C 4.041120930370335 16.853284547100685 2.7882321357138156 18.662830186567 3.022819942042074 20.603279323695308 C 3.257407748370332 22.543728460823615 4.905423915414993 24.00257336904616 6.859999999999999 24 C 8.36397150754539 23.99347459172505 9.731612173561015 23.12704314706174 10.379999999999999 21.770000000000003 L 12 17.7 L 13.65 21.84 C 14.309752918136473 23.163422467889323 15.66124345279743 23.99987506240728 17.139999999999997 24 C 19.09651203930606 24.007699812649072 20.74934892282208 22.550346523968198 20.986685747953192 20.608267772088894 C 21.2240225730843 18.66618902020959 19.970786385436877 16.853691453449606 18.07 16.39 Z M 8.71 20.55 L 8.55 21 C 8.21593694882884 21.621169736071604 7.56527427639346 22.006177234554077 6.860000000000001 22 C 6.106803444108113 22.004049502296223 5.425516889380684 21.553451558818335 5.134470768369342 20.858747588971823 C 4.843424647358 20.164043619125316 5.000080528295749 19.362389821475425 5.531241114106001 18.828358097363495 C 6.062401699916252 18.294326373251568 6.863199349215703 18.133351216176486 7.559462195087342 18.420648100487778 C 8.25572504095898 18.70794498479907 8.709989114162687 19.386792558349462 8.71 20.139999999999997 Z M 17.14 22 C 16.444256131630542 21.99950964111033 15.805667250725088 21.61481754417933 15.48 21 L 15.290000000000001 20.51 L 15.290000000000001 20.110000000000003 C 15.306540100619463 19.085521425035978 16.148495623980946 18.26735255610334 17.17302752140719 18.280171161526667 C 18.197559418833436 18.292989766949994 19.018781266802414 19.131967762983166 19.009684325715057 20.156539464306054 C 19.0005873846277 21.181111165628938 18.16459798612874 22.00537515671843 17.14 22 Z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Cut</span>
+                    </li>
+                    <li>
+                      <svg id='Paste_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.43 0 0 0.43 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-24, -23)" d="M 24.173828 0.005859375 C 23.873641 -0.0085580818 23.565514 0.011614434 23.253906 0.068359375 C 21.675887 0.3544092 20.415106 1.5781283 20.087891 3.1503906 C 19.955098 3.7892965 19.996717 4.4170175 20.148438 5 L 16 5 C 15.447738123791542 5.0000552179053495 15.000055217905349 5.447738123791542 15 6.000000000000001 L 15 9 C 15 10.64497 16.35503 12 18 12 L 30 12 C 31.64497 12 33 10.64497 33 9 L 33 7 L 36 7 C 37.668484 7 39 8.3315161 39 10 L 39 16 C 38.99489971045452 16.360635916577568 39.184375296169335 16.696081364571608 39.49587284971433 16.877887721486516 C 39.80737040325933 17.059694078401428 40.19262959674067 17.059694078401428 40.50412715028567 16.877887721486516 C 40.81562470383067 16.696081364571608 41.00510028954548 16.360635916577568 41 16 L 41 10 C 41 7.2504839 38.749516 5 36 5 L 32 5 C 31.44773812379154 5.0000552179053495 31.00005521790535 5.447738123791542 31 6.000000000000001 L 31 9 C 31 9.5650302 30.56503 10 30 10 L 18 10 C 17.43497 10 17 9.5650302 17 9 L 17 7 L 21.769531 7 C 22.165387019311993 7.000513974604222 22.524292699993637 6.767491549875226 22.68490839904321 6.405683797865619 C 22.845524098092785 6.0438760458560115 22.777619145211688 5.621381483256264 22.511719 5.328125 C 22.103575 4.8772294 21.898834 4.268913 22.046875 3.5566406 C 22.2023 2.8136115 22.861908 2.1710047 23.611328 2.0351562 C 24.940464 1.7931159 26 2.7520498 26 4 C 26 4.5189177 25.808722 4.9743054 25.488281 5.328125 C 25.248225584646807 5.592931554771692 25.167682734651013 5.965693259490862 25.276993627293173 6.30598760654973 C 25.386304519935333 6.646281953608598 25.66886127343204 6.9024071578427515 26.01822235324473 6.977878674341092 C 26.36758343305742 7.053350190839432 26.730669522267085 6.936701440254537 26.970703 6.671875 C 27.610263 5.9656946 28 5.0210823 28 4 C 28 1.8614564 26.275135 0.10678157 24.173828 0.005859375 z M 12 5 C 9.2504839 5 7 7.2504839 7 10 L 7 41 C 7 43.749516 9.2504839 46 12 46 L 22.5 46 L 23 46 L 37.5 46 C 39.421188 46 41 44.421188 41 42.5 L 41 23.5 C 41 21.578812 39.421188 20 37.5 20 L 22.5 20 C 20.578812 20 19 21.578812 19 23.5 L 19 42.5 C 19 43.03801 19.134994 43.542844 19.355469 44 L 12 44 C 10.331516 44 9 42.668484 9 41 L 9 10 C 9 8.3315161 10.331516 7 12 7 C 12.36063591657757 7.005100289545485 12.696081364571606 6.815624703830668 12.877887721486516 6.50412715028567 C 13.059694078401428 6.19262959674067 13.059694078401428 5.80737040325933 12.877887721486516 5.495872849714331 C 12.696081364571606 5.184375296169332 12.36063591657757 4.994899710454515 12 5 z M 22.5 22 L 37.5 22 C 38.340812 22 39 22.659188 39 23.5 L 39 42.5 C 39 43.340812 38.340812 44 37.5 44 L 23 44 L 22.5 44 C 21.659188 44 21 43.340812 21 42.5 L 21 23.5 C 21 22.659188 21.659188 22 22.5 22 z M 25 26 C 24.639364083422432 25.994899710454515 24.303918635428392 26.184375296169332 24.122112278513484 26.49587284971433 C 23.940305921598572 26.80737040325933 23.940305921598572 27.192629596740673 24.122112278513484 27.50412715028567 C 24.303918635428396 27.815624703830668 24.639364083422432 28.005100289545485 25 28 L 35 28 C 35.36063591657757 28.005100289545485 35.696081364571604 27.815624703830668 35.877887721486516 27.50412715028567 C 36.05969407840143 27.19262959674067 36.05969407840143 26.80737040325933 35.877887721486516 26.49587284971433 C 35.696081364571604 26.184375296169332 35.36063591657757 25.994899710454515 35 26 L 25 26 z M 25 32 C 24.639364083422432 31.994899710454515 24.303918635428392 32.184375296169335 24.122112278513484 32.49587284971433 C 23.940305921598572 32.80737040325933 23.940305921598572 33.19262959674067 24.122112278513484 33.50412715028567 C 24.303918635428396 33.81562470383067 24.639364083422432 34.00510028954548 25 34 L 35 34 C 35.36063591657757 34.00510028954548 35.696081364571604 33.81562470383067 35.877887721486516 33.50412715028567 C 36.05969407840143 33.19262959674067 36.05969407840143 32.80737040325933 35.877887721486516 32.49587284971433 C 35.696081364571604 32.184375296169335 35.36063591657757 31.994899710454515 35 32 L 25 32 z M 25 38 C 24.639364083422432 37.99489971045452 24.303918635428392 38.184375296169335 24.122112278513484 38.49587284971433 C 23.940305921598572 38.80737040325933 23.940305921598572 39.19262959674067 24.122112278513484 39.50412715028567 C 24.303918635428396 39.81562470383067 24.639364083422432 40.00510028954548 25 40 L 32 40 C 32.36063591657757 40.00510028954548 32.696081364571604 39.81562470383067 32.877887721486516 39.50412715028567 C 33.05969407840143 39.19262959674067 33.05969407840143 38.80737040325933 32.877887721486516 38.49587284971433 C 32.696081364571604 38.184375296169335 32.36063591657757 37.99489971045452 32 38 L 25 38 z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Paste</span>
+                    </li>
+                  </ul>
+                </div>
+                <h1 class="text-sm font-semibold">
+                  Clipboard
+                </h1>
+              </div>
+            </div>
+            <span class="border border-r"></span>
+            <div class="gambar w-1/6 sm:w-full md:w-1/3 lg:w-1/6 xl:w-1/6 ">
+              <div class="flex flex-col justify-center items-center mt-4">
+                <div>
+                  <ul class="options grid grid-cols-3 gap-2 mb-10">
+                    <li>
+                      <svg id='Crop_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.97 0 0 0.97 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-12.35, -11.65)" d="M 21.292969 1.2929688 L 18.585938 4 L 8 4 L 8 6 L 16.585938 6 L 6 16.585938 L 6 2 L 4 2 L 4 4 L 2 4 L 2 6 L 4 6 L 4 18 C 4 19.093063 4.9069372 20 6 20 L 18 20 L 18 22 L 20 22 L 20 20 L 22 20 L 22 18 L 7.4140625 18 L 18 7.4140625 L 18 16 L 20 16 L 20 5.4140625 L 22.707031 2.7070312 L 21.292969 1.2929688 z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Crop</span>
+                    </li>
+                    <li>
+                      <svg id='Vectors_Anchor_Rectangle_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.83 0 0 0.83 12 12)" >
+                        <g style="" >
+                        <g transform="matrix(1 0 0 1 9.5 0)" >
+                        <line style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" x1="0" y1="-4.5" x2="0" y2="4.5" />
+                        </g>
+                        <g transform="matrix(1 0 0 1 0 -8)" >
+                        <line style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" x1="-7.5" y1="-1.5" x2="7.5" y2="1.5" />
+                        </g>
+                        <g transform="matrix(1 0 0 1 -9.5 0)" >
+                        <line style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" x1="0" y1="7.5" x2="0" y2="-7.5" />
+                        </g>
+                        <g transform="matrix(1 0 0 1 0 8)" >
+                        <line style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" x1="7.5" y1="-1.5" x2="-7.5" y2="1.5" />
+                        </g>
+                        <g transform="matrix(1 0 0 1 -9.5 -9.5)" >
+                        <rect style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" x="-2" y="-2" rx="0.5" ry="0.5" width="4" height="4" />
+                        </g>
+                        <g transform="matrix(1 0 0 1 9.5 -6.5)" >
+                        <rect style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" x="-2" y="-2" rx="0.5" ry="0.5" width="4" height="4" />
+                        </g>
+                        <g transform="matrix(1 0 0 1 -9.5 9.5)" >
+                        <rect style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" x="-2" y="-2" rx="0.5" ry="0.5" width="4" height="4" />
+                        </g>
+                        <g transform="matrix(1 0 0 1 9.5 6.5)" >
+                        <rect style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" x="-2" y="-2" rx="0.5" ry="0.5" width="4" height="4" />
+                        </g>
+                        </g>
+                        </g>
+                        </svg>
+                      <span class="hidden">Rezise</span>
+                    </li>
+                    <li>
+                      <svg id='Rotate_Right_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(1 0 0 1 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-12, -12)" d="M 12.001953 2 C 6.4906193 2 2.0019531 6.4886661 2.0019531 12 C 2.0019531 17.511334 6.4906193 22 12.001953 22 C 12.744953 22 13.485125 21.917906 14.203125 21.753906 L 13.765625 19.777344 C 13.189625 19.908344 12.596953 20 12.001953 20 C 7.5712872 20 4.0019531 16.430666 4.0019531 12 C 4.0019531 7.5693339 7.5712872 4 12.001953 4 C 13.704556 4 15.270464 4.5348237 16.564453 5.4375 L 15.001953 7 L 20.001953 7 L 20.001953 2 L 18.001953 4 C 16.330317 2.7446772 14.248737 2 12.001953 2 z M 20.001953 12 C 19.991953 12.605 19.915344 13.204203 19.777344 13.783203 L 21.720703 14.259766 C 21.893703 13.536766 21.988 12.753 22 12 L 20.001953 12 z M 19.171875 15.470703 C 18.908875 16.006703 18.584937 16.514469 18.210938 16.980469 L 19.763672 18.259766 C 20.230672 17.677766 20.634891 17.041094 20.962891 16.371094 L 19.171875 15.470703 z M 16.945312 18.242188 C 16.479312 18.614188 15.972453 18.932453 15.439453 19.189453 L 16.300781 21.019531 C 16.966781 20.697531 17.600594 20.297031 18.183594 19.832031 L 16.945312 18.242188 z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Rotate</span>
+                    </li>
+                  </ul>
+                </div>
+                <h1 class="text-sm font-semibold mb-2">
+                  Gambar
+                </h1>
+              </div>
+            </div>
+            <span class="border border-r"></span>
+            <div class="alat w-1/6 sm:w-full md:w-1/3 lg:w-1/6 xl:w-1/6 ">
+              <div class="flex flex-col justify-center items-center mt-4">
+                <div>
+                  <ul class="options grid grid-cols-3 gap-2 mb-4">
+                    <li class="option active tool" id="brush">
+                      <svg id='Cosmetic_Brush_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.83 0 0 0.83 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-13.03, -12.97)" d="M 23.75 0.9375 C 23.386719 0.9375 22.988281 1.0625 22.6875 1.3125 L 13.40625 9.0625 C 13.171875 9.144531 12.957031 9.28125 12.75 9.46875 C 12.730469 9.488281 12.707031 9.480469 12.6875 9.5 L 8.125 13.5625 L 7.34375 14.25 L 11 17.90625 L 11.75 18.6875 L 12.46875 17.84375 L 16.3125 13.3125 L 16.46875 13.15625 L 16.40625 13.09375 C 16.421875 13.078125 16.421875 13.046875 16.4375 13.03125 L 16.5 13.09375 L 24.6875 3.3125 C 25.1875 2.710938 25.1875 1.8125 24.6875 1.3125 C 24.4375 1.0625 24.113281 0.9375 23.75 0.9375 Z M 14 11 L 14.90625 11.90625 L 11.625 15.71875 L 10.25 14.34375 Z M 6.40625 15.09375 L 1.6875 17.5 C 1.289063 17.699219 1 18.007813 1 18.40625 C 1 18.804688 0.992188 19.398438 1.09375 20 L 5.1875 17.40625 L 1.1875 20.40625 C 1.386719 21.304688 1.914063 22.292969 2.8125 23.09375 C 3.3125 23.59375 3.8125 23.886719 4.3125 24.1875 L 5.90625 22.59375 L 5 24.5 C 6 25 6.992188 25 7.59375 25 C 7.992188 25 8.398438 24.707031 8.5 24.40625 L 10.90625 19.59375 Z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Kuas</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                      <svg id='Eraser_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.84 0 0 0.84 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-12.05, -11.55)" d="M 14.6875 1.09375 L 0.09375 15.6875 L 0.78125 16.40625 L 6.375 22 L 24 22 L 24 20 L 14.21875 20 L 23.90625 10.3125 L 23.21875 9.59375 L 15.40625 1.78125 Z M 8.4375 10.1875 L 14.8125 16.5625 L 11.375 20 L 7.21875 20 L 2.9375 15.6875 Z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Penghapus</span>
+                    </li>
+                    <li class="option tool" id="text">
+                      <svg id='Add_Text_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.91 0 0 0.91 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-13, -13.5)" d="M 9 3 L 2 21 L 4 21 L 6.3320312 15 L 13.259766 15 C 13.730766 14.325 14.318188 13.737625 14.992188 13.265625 L 11 3 L 9 3 z M 10 5.5703125 L 12.888672 13 L 7.1113281 13 L 10 5.5703125 z M 19 14 C 16.239 14 14 16.239 14 19 C 14 21.761 16.239 24 19 24 C 21.761 24 24 21.761 24 19 C 24 16.239 21.761 14 19 14 z M 18 16 L 20 16 L 20 18 L 22 18 L 22 20 L 20 20 L 20 22 L 18 22 L 18 20 L 16 20 L 16 18 L 18 18 L 18 16 z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Text</span>
+                    </li>
+                  </ul>
+                  <div class="option">
+                    <input type="range" id="size-slider" min="1" max="100" value="5"/>
+                  </div>
+                </div>
+                <h1 class="text-sm font-semibold">
+                  Alat
+                </h1>
+              </div>
+            </div>
+            <span class="border border-r"></span>
+            <div class="bentuk w-1/6 sm:w-full md:w-1/3 lg:w-1/6 xl:w-1/6 ">
+              <div class="flex flex-col justify-center items-center mt-4">
+                <div>
+                  <ul class="options grid grid-cols-3 gap-2">
+                    <li class="option tool" id="rectangle">
+                      <svg id='Rectangle_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.5 0 0 0.5 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-24, -24)" d="M 6 8 C 4.8954762475830815 8.000110435810699 4.000110435810698 8.895476247583083 4 10.000000000000002 L 4 38 C 4.000110435810698 39.10452375241692 4.8954762475830815 39.9998895641893 6 40 L 42 40 C 43.10452375241692 39.9998895641893 43.9998895641893 39.10452375241692 44 38 L 44 10 C 43.9998895641893 8.895476247583082 43.10452375241692 8.000110435810699 42 8 L 6 8 z M 8 12 L 40 12 L 40 36 L 8 36 L 8 12 z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Kotak</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                      <svg id='Circle_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.83 0 0 0.83 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-15, -15)" d="M 15 3 C 8.3845336 3 3 8.3845336 3 15 C 3 21.615466 8.3845336 27 15 27 C 21.615466 27 27 21.615466 27 15 C 27 8.3845336 21.615466 3 15 3 z M 15 5 C 20.534534 5 25 9.4654664 25 15 C 25 20.534534 20.534534 25 15 25 C 9.4654664 25 5 20.534534 5 15 C 5 9.4654664 9.4654664 5 15 5 z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Lingkaran</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                      <svg id='Triangle_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+
+
+                        <g transform="matrix(0.82 0 0 0.82 12 12)" >
+                        <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-16, -15.45)" d="M 16 4.90625 L 15.125 6.40625 L 4.71875 24.5 L 3.875 26 L 28.125 26 L 27.28125 24.5 L 16.875 6.40625 Z M 16 8.9375 L 24.65625 24 L 7.34375 24 Z" stroke-linecap="round" />
+                        </g>
+                        </svg>
+                      <span class="hidden">Segitiga</span>
+                    </li>
+                  </ul>
+                  <div class="option flex justify-center mb-4 gap-1">
+                    <input type="checkbox" id="fill-color"/>
+                    <label for="fill-color">Fill Color</label>
+                  </div>
+                </div>
+                <h1 class="text-sm font-semibold">
+                  Bentuk
+                </h1>
+              </div>
+            </div>
+            <span class="border border-r"></span>
+            <div class="colors w-1/6 sm:w-full md:w-1/3 lg:w-1/6 xl:w-1/6 ">
+              <div class="flex flex-col justify-center items-center mt-4">
+                  <ul class="options grid grid-cols-5 gap-4 mb-10">
+                    <li class="option selected">
+                        <input type="color" id="color-picker" value="#FFFFFF" class="rounded-full w-5 h-5 hover:cursor-pointer active:border-black focus:outline-black focus:ring focus:ring-black"/>
+                      </li>
+                    <li class="option bg-black rounded-full w-5 h-5 border hover:cursor-pointer active:border-black focus:outline-black focus:ring focus:ring-black"></li>
+                    <li class="option bg-[#e02020] rounded-full w-5 h-5 border hover:cursor-pointer active:border-black focus:outline-black focus:ring focus:ring-black"></li>
+                    <li class="option bg-[#6dd400] rounded-full w-5 h-5 border hover:cursor-pointer active:border-black focus:outline-black focus:ring focus:ring-black"></li>
+                    <li class="option bg-[#4a98f7] rounded-full w-5 h-5 border hover:cursor-pointer active:border-black focus:outline-black focus:ring focus:ring-black"></li>
+                  </ul>
+                <h1 class="text-sm font-semibold">
+                  Warna
+                </h1>
+              </div>
+            </div>
+          </header>
+          <div class="drawing-board bg-neutral-400 w-full h-screen p-12 flex justify-center">
+            <canvas id="canvas" width="1280" height="720" class="shadow-lg rounded-md"></canvas>
+          </div>
+          <section>
+            <footer class="bg-neutral-200 pt-1.5 pb-1.5 grid grid-cols-2 text-center text-xs">
+              <div class="flex justify-center">
+                <span id="pixelX">-</span>
+                <span id="pixelY">-</span>
+              </div>
+              <div class="flex justify-center">
+                <div id="canvasWidth">-</div>x
+                <div id="canvasHeight">-</div>
+              </div>
+            </footer>
+          </section>
+        </section> 
+      </body>
+      </html>
+</html>
