@@ -1,6 +1,6 @@
 # Paint Apps
 
-Pada repo ini saya `I Gede Gelgel Abdiutama`, membuat program yang dibuat menyerupai Microsoft Paint pada Windows dengan fungsi yang hampir mirip. Program ini dikembangkan dalam memenuhi tugas pada matakuliah Grafika Komputer dengan kombinasi ilmu-ilmu yang telah dipelajari sehingga program ini dapat berjalan dan berfungsi dengan baik.
+Pada repo ini saya `I Gede Gelgel Abdiutama`, membuat program yang dibuat menyerupai Microsoft Paint pada Windows dengan fungsi yang hampir mirip. Program ini dikembangkan untuk memenuhi tugas pada matakuliah Grafika Komputer dengan kombinasi ilmu-ilmu yang telah dipelajari sehingga program ini dapat berjalan dan berfungsi dengan baik.
 
 ## Fitur
 
